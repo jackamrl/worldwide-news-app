@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-colors {
+  @apply bg-custom text-custom;
+}
+
+
+// /* Styles pour le mode clair */
+// @media (prefers-color-scheme: light) {
+//   body {
+//     background-color: #fff;
+//     color: #2d3748;
+//   }
+// }
+
+// /* Styles pour le mode sombre */
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: #2d3748;
+//     color: #fff;
+//   }
+// }
+
+// :root {
+//   --background-color: #f0f0f0;
+//   --text-color: #2d3748;
+// }
+
+// /* Mode sombre */
+// .dark-mode {
+//   --background-color: #2d3748;
+//   --text-color: #f0f0f0;
+// }
+
+.dark-mode {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+}
+
+.light-mode {
+  --bg-color: #f1f5f9;
+  --text-color: #0f172a;
+}
+
+// body {
+//   background-color: var(--bg-color);
+//   color: var(--text-color);
+// }
+
+/* Définition des classes personnalisées pour les éléments spécifiques */
+.bg-custom {
+  background-color: var(--bg-color);
+}
+
+.text-custom {
+  color: var(--text-color);
+}
+
