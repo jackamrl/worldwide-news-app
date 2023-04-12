@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .custom-colors {
-  @apply bg-custom text-custom;
+  @apply bg-custom text-custom border-custom;
 }
 
 
@@ -36,19 +36,22 @@
 // }
 
 .dark-mode {
-  --bg-color: #0f172a;
-  --text-color: #f1f5f9;
+  --bg-color: #0d1322;
+  --text-color: #dde5e9;
+  --border-color: #1a202c;
 }
 
 .light-mode {
-  --bg-color: #f1f5f9;
-  --text-color: #0f172a;
+  --bg-color: #dde5e9;
+  --text-color: #111827;
+  --border-color: #e2e8f0;
+
 }
 
-// body {
-//   background-color: var(--bg-color);
-//   color: var(--text-color);
-// }
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 
 /* Définition des classes personnalisées pour les éléments spécifiques */
 .bg-custom {
@@ -56,6 +59,11 @@
 }
 
 .text-custom {
+
   color: var(--text-color);
+}
+
+.border-custom {
+  border-color: (var --border-color) ;
 }
 

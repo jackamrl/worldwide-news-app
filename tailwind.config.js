@@ -2,7 +2,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{html,ts}"],
   theme: {
     screens: {
