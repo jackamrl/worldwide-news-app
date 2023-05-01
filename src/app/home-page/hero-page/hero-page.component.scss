@@ -1,0 +1,25 @@
+@import './../../../styles.scss';
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #7f00ff, #5600c6, #2e008d);
+}
+
+.via-purple-800 {
+  background-color: #5600c6;
+}
+
+.to-purple-700 {
+  background-color: #2e008d;
+}
+
+.bg-blur {
+  backdrop-filter: blur(20px);
+}
+
+section{
+  position: absolute;
+width: 201px;
+height: 109px;
+left: 994px;
+filter: blur(85px);
+opacity: 30%;
+}

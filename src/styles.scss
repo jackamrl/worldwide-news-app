@@ -37,12 +37,12 @@
 
 .dark-mode {
   --bg-color: #0d1322;
-  --text-color: #dde5e9;
+  --text-color: #ebf0f3;
   --border-color: #1a202c;
 }
 
 .light-mode {
-  --bg-color: #dde5e9;
+  --bg-color: #ebf0f3;
   --text-color: #111827;
   --border-color: #e2e8f0;
 
@@ -67,3 +67,64 @@ body {
   border-color: (var --border-color) ;
 }
 
+.btn-primary {
+  @apply py-2 px-4 bg-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50;
+}
+.btn-secondary {
+  @apply py-2 px-4 bg-transparent text-purple-500 font-semibold rounded-lg border-solid border-2 border-purple-500  hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50;
+}
+
+// :root {
+//   --primary-bg-color: #6b46c1;
+//   --primary-text-color: #fff;
+//   --primary-hover-color: #805ad5;
+//   --primary-focus-color: #6b46c1;
+//   --primary-ring-color: rgba(107, 70, 193, 0.5);
+//   --primary-border-color: #6b46c1;
+//   --primary-dark-bg-color: #4c1d95;
+//   --primary-dark-text-color: #fff;
+//   --primary-dark-hover-color: #633db9;
+//   --primary-dark-focus-color: #4c1d95;
+//   --primary-dark-ring-color: rgba(76, 29, 149, 0.5);
+//   --primary-dark-border-color: #4c1d95;
+// }
+
+// .btn-primary {
+//   @apply py-2 px-4 font-semibold rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-ring-color;
+
+//   background-color: var(--primary-bg-color);
+//   color: var(--primary-text-color);
+//   border-color: var(--primary-border-color);
+
+//   &:hover {
+//     background-color: var(--primary-hover-color);
+//   }
+
+//   &:focus {
+//     background-color: var(--primary-focus-color);
+//   }
+
+//   &:active {
+//     background-color: var(--primary-focus-color);
+//   }
+
+//   @media (prefers-color-scheme: dark) {
+//     background-color: var(--primary-dark-bg-color);
+//     color: var(--primary-dark-text-color);
+//     border-color: var(--primary-dark-border-color);
+
+//     &:hover {
+//       background-color: var(--primary-dark-hover-color);
+//     }
+
+//     &:focus {
+//       background-color: var(--primary-dark-focus-color);
+//     }
+
+//     &:active {
+//       background-color: var(--primary-dark-focus-color);
+//     }
+
+//     @apply dark:focus:ring-primary-dark-ring-color;
+//   }
+// }
