@@ -5,13 +5,13 @@ module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "1080px",
-      xl: "1280px",
-      "2xl": "1536px",
-    },
+    // screens: {
+    //   sm: "480px",
+    //   md: "768px",
+    //   lg: "1080px",
+    //   xl: "1280px",
+    //   "2xl": "1536px",
+    // },
     extend: {
       colors: {
         customRed: "#FF0000",
@@ -30,6 +30,10 @@ module.exports = {
           700: "#4a5568",
           800: "#2d3748",
           900: "#1a202c",
+        },
+        slate: {
+          950: "#1F2937",
+          // ...
         },
         red: {
           500: "#b10404",
