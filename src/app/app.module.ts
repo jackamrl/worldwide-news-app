@@ -7,10 +7,22 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { SharedModule } from './shared/shared.module';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { NewCardComponent } from './new-card/new-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NewPageComponent } from './new-page/new-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NewModalComponent } from './new-modal/new-modal.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HomePageModule, SharedModule],
+  declarations: [AppComponent, NewsPageComponent, NewCardComponent, NewPageComponent, PageNotFoundComponent, NewModalComponent],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    HomePageModule,
+    SharedModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
