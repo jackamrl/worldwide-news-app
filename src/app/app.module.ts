@@ -13,9 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewPageComponent } from './new-page/new-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewModalComponent } from './new-modal/new-modal.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, NewsPageComponent, NewCardComponent, NewPageComponent, PageNotFoundComponent, NewModalComponent],
+  declarations: [AppComponent, NewsPageComponent, NewCardComponent, NewPageComponent, PageNotFoundComponent, NewModalComponent, ContactComponent, AboutComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

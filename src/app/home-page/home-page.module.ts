@@ -6,7 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
-  imports: [SharedModule],
+  imports: [SharedModule, CommonModule],
   declarations: [HomePageComponent, HeroPageComponent, FeaturesComponent],
   providers: [],
   exports: [HomePageComponent],

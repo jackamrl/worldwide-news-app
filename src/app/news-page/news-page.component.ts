@@ -32,9 +32,9 @@ export class NewsPageComponent implements OnInit {
 
       error: (err) => {
         console.log(err);
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 2000);
+        this.isLoading = false;
+        // setTimeout(() => {
+        // }, 2000);
       },
     });
   }

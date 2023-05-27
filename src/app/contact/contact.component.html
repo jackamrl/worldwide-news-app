@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="relative w-auto my-6 mx-auto max-w-6xl py-18">
+    <!--content-->
+    <div class="relative flex flex-col w-full bg-custom">
+      <div class="relative p-6 flex-auto">
+        <h1
+          class="text-center font-bold tracking-normal text-3xl sm:text-3xl md:text-5xl lg:text-6xl mb-12"
+        >
+          Contactez-nous
+        </h1>
+
+        <div class="my-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-custom"
+            >Email address*</label
+          >
+          <input
+            #emailInput
+            type="email"
+            id="email"
+            class="bg-custom border border-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:border-purple-600 dark:placeholder-gray-400 dark:focus:ring-purple-500 dark:focus:border-purple-500"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+        <div class="my-6">
+          <label for="name" class="block mb-2 text-sm font-medium text-custom"
+            >Nom & prénom(s)
+          </label>
+          <input
+            #nameInput
+            type="text"
+            id="name"
+            class="bg-custom border border-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:border-purple-600 dark:placeholder-gray-400 dark:focus:ring-purple-500 dark:focus:border-purple-500"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+        <div class="my-6">
+          <label
+            for="theSubject"
+            class="block mb-2 text-sm font-medium text-custom"
+            >Sujet*</label
+          >
+          <input
+            #theSubjectInput
+            type="text"
+            id="theSubject"
+            class="bg-custom border border-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:border-purple-600 dark:placeholder-gray-400 dark:focus:ring-purple-500 dark:focus:border-purple-500"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+        <div class="my-6">
+          <label
+            for="message"
+            class="block mb-2 text-sm font-medium text-custom"
+            >Votre message*</label
+          >
+          <textarea
+            rows="6"
+            #messageInput
+            type="text"
+            id="message"
+            class="bg-custom border border-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:border-purple-600 dark:placeholder-gray-400 dark:focus:ring-purple-500 dark:focus:border-purple-500"
+            placeholder="john.doe@company.com"
+            required
+          ></textarea>
+        </div>
+        <button
+          class="btn-primary w-full my-8 h-12"
+          (click)="
+            sendEmail(
+              emailInput.value,
+              nameInput.value,
+              theSubjectInput.value,
+              messageInput.value
+            )
+          "
+        >
+          Envoyer le message
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
