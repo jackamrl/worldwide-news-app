@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,16 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, NewsPageComponent, NewCardComponent, NewPageComponent, PageNotFoundComponent, NewModalComponent, ContactComponent, AboutComponent],
+  declarations: [
+    AppComponent,
+    NewsPageComponent,
+    NewCardComponent,
+    NewPageComponent,
+    PageNotFoundComponent,
+    NewModalComponent,
+    ContactComponent,
+    AboutComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -25,7 +35,9 @@ import { AboutComponent } from './about/about.component';
     HomePageModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/worldwidenews/' }, // Remplacez 'subdomain' par le nom de votre sous-domaine
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
