@@ -5,36 +5,125 @@
   ></section>
   <section
     style="left: 50%"
-    class="w-6/12 from-blue-900 via-blue-800 to-blue-700 bg-blur"
+    class="w-6/12 from-purple-900 via-purple-800 to-purple-700 bg-blur"
   ></section>
   <!-- <img src="./../../../assets/clock-dynamic-premium.png" alt="" /> -->
 
   <div class="container mx-auto bg-custom borer-custom">
     <div class="flex flex-col mx-auto mt-14 md:my-28 w-8/12">
       <h1
-        class="text-center font-bold tracking-normal text-3xl sm:text-3xl md:text-5xl lg:text-6xl"
+        class="animate__animated animate__fadeInUp text-center font-bold tracking-normal text-3xl sm:text-3xl md:text-5xl lg:text-6xl"
       >
-        Recevez en temps réel les annonces du monde entier.
+        Recevez en temps réel les actualités du monde entier.
       </h1>
-      <p class="text-center font-medium text-base sm:text-xl my-6 opacity-70">
+      <p
+        class="animate__animated animate__fadeIn animate__delay-1s text-center font-medium text-base sm:text-xl my-6 opacity-70"
+      >
         Grâce à Worldwide News consultez en temps réel les anonces mondiales.
         Qu'attendez-vous pour découvrir les news ?
       </p>
       <!-- <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+      class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"
     >
       Button
     </button> -->
-      <div class="flex flex-col md:flex-row md:mx-auto">
+      <div
+        class="animate__animated animate__fadeInUp animate__delay-2s flex flex-col md:flex-row md:mx-auto"
+      >
         <button
           style="margin: 10px"
           class="btn-primary w-full h-12 mx-8 md:w-auto"
+          (click)="navigateToNews()"
         >
           Découvrir les news
         </button>
         <button
           style="margin: 10px"
           class="btn-secondary w-full h-12 mx-8 md:w-auto"
+          (click)="toggleTheModal()"
+        >
+          S'abonner
+        </button>
+        <div
+          *ngIf="showModal"
+          class="opacity-25 fixed inset-0 z-40 bg-black"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The modal -->
+<div
+  *ngIf="showModal"
+  class="h-4/5 w-4/5 m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+>
+  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+    <!--content-->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-custom outline-none focus:outline-none"
+    >
+      <div class="relative p-6 flex-auto">
+        <h3 class="text-base sm:text-xl font-medium">
+          Abonez-vous pour reçevoir les nouvelles maj de worldwide
+        </h3>
+
+        <div class="my-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-custom"
+            >Email address</label
+          >
+          <input
+            #emailInput
+            type="email"
+            id="email"
+            class="bg-custom border border-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:border-purple-600 dark:placeholder-gray-400 dark:focus:ring-purple-500 dark:focus:border-purple-500"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+        <div class="my-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-custom"
+            >Nom & prénom(s) (Optionnel)</label
+          >
+          <input
+            #nameInput
+            type="email"
+            id="email"
+            class="bg-custom border border-gray-300 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:border-purple-600 dark:placeholder-gray-400 dark:focus:ring-purple-500 dark:focus:border-purple-500"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
+            <input
+              id="remember"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-purple-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-purple-600 dark:ring-offset-gray-800"
+              required
+            />
+          </div>
+          <label for="remember" class="ml-2 text-sm font-medium"
+            >D'accord pour recevoir les mises à jour.
+          </label>
+        </div>
+      </div>
+      <!--footer-->
+      <div
+        class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b"
+      >
+        <button
+          class="px-8 h-10 py-2 mr-1 mb-1 btn-secondary"
+          type="button"
+          (click)="toggleTheModal()"
+        >
+          Fermer
+        </button>
+        <button
+          class="px-6 h-10 py-2 mr-1 btn-primary"
+          type="button"
+          (click)="sendEmail(emailInput.value, nameInput.value)"
         >
           S'abonner
         </button>

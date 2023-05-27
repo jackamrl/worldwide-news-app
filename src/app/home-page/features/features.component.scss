@@ -1,0 +1,14 @@
+.animated-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-animation 4s steps(30) forwards;
+}
+
+@keyframes typing-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
