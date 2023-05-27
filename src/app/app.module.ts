@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { APP_BASE_HREF } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,9 +34,7 @@ import { AboutComponent } from './about/about.component';
     HomePageModule,
     SharedModule,
   ],
-  providers: [
-    { provide: APP_BASE_HREF, useValue: '/worldwidenews/' }, // Remplacez 'subdomain' par le nom de votre sous-domaine
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
