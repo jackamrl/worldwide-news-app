@@ -104,12 +104,14 @@
     </div>
   </section>
 </ng-container>
+
 <ng-template #loadedContent>
   <div class="container mx-auto py-8">
     <h1
-      class="text-left font-bold tracking-normal text-xl sm:text-2xl lg:text-3xl"
+      *ngIf="curentTopHeadLineNews.length > 0"
+      class="text-center md:text-left font-bold tracking-normal text-xl sm:text-2xl lg:text-3xl"
     >
-      Liste des news mondiales
+      Les titres d'actualités
     </h1>
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8 xl:grid-cols-4"
@@ -120,4 +122,91 @@
     </div>
   </div>
 </ng-template>
+
+<div class="container m-auto" *ngIf="trialUseEnd">
+  <h1
+    class="text-center font-bold tracking-normal text-3xl sm:text-3xl md:text-5xl lg:text-6xl"
+  >
+    Il se peut que la version d'essai de notre API soit expiré !😔
+  </h1>
+
+  <div class="p-12">
+    <h1
+      class="text-center font-semibold opacity-75 tracking-normal text-2xl md:text-2xl mb-4"
+    >
+      Q: Par quel moyent pourais-je vous soutenir ?
+    </h1>
+
+    <p
+      class="text-center font-medium opacity-75 text-base md:text-lg opacity-70"
+    >
+      R: C'est facile vous pouvez nous soutenir en nous achetant un café ou par
+      Paypal
+    </p>
+    <div class="flex text-center justify-center m-6">
+      <a
+        class="mr-6"
+        href="https://www.buymeacoffee.com/jackdevlondou"
+        target="_blank"
+        ><img
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png"
+          alt="Buy Me A Coffee"
+          style="height: 60px !important; width: 217px !important"
+      /></a>
+      <a
+        target="_blank"
+        href="https://paypal.me/jacquesboyodi?country.x=SN&locale.x=fr_XC"
+        class="flex items-center py-6 mr-1 w-16 h-12 my-3 justify-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 28.87 28.87"
+          id="paypal"
+        >
+          <defs>
+            <linearGradient
+              id="a"
+              x1="-3.04"
+              x2="29.49"
+              y1="-2.41"
+              y2="28.95"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#253b80"></stop>
+              <stop offset="1" stop-color="#179bd7"></stop>
+            </linearGradient>
+          </defs>
+          <g data-name="Layer 2">
+            <g data-name="Layer 1">
+              <rect
+                width="28.87"
+                height="28.87"
+                fill="url(#a)"
+                rx="6.48"
+                ry="6.48"
+              ></rect>
+              <path
+                fill="#fff"
+                d="M19.88 10.5l-.05.29c-.66 3.37-2.9 4.53-5.77 4.53H12.6a.71.71 0 0 0-.7.6l-.75 4.74-.21 1.34a.37.37 0 0 0 .37.43h2.59a.62.62 0 0 0 .62-.52v-.13l.48-3.09v-.17a.62.62 0 0 1 .62-.53h.39c2.51 0 4.47-1 5-4a3.38 3.38 0 0 0-.52-3 2.47 2.47 0 0 0-.61-.49z"
+                data-name="<Path>"
+                opacity=".3"
+              ></path>
+              <path
+                fill="#fff"
+                d="M19.19 10.23l-.31-.08-.33-.06a8.1 8.1 0 0 0-1.28-.09h-3.9a.62.62 0 0 0-.61.53l-.83 5.25v.15a.71.71 0 0 1 .7-.6h1.46c2.87 0 5.11-1.16 5.77-4.53 0-.1 0-.2.05-.29a3.49 3.49 0 0 0-.54-.23z"
+                data-name="<Path>"
+                opacity=".5"
+              ></path>
+              <path
+                fill="#fff"
+                d="M12.75 10.52a.62.62 0 0 1 .61-.53h3.9a8.1 8.1 0 0 1 1.29.09l.33.06.31.08h.15a3.54 3.54 0 0 1 .54.23 3.18 3.18 0 0 0-.67-2.86c-.74-.84-2.08-1.21-3.79-1.21h-5a.71.71 0 0 0-.7.6L7.66 20.17a.43.43 0 0 0 .42.49h3.07l.77-4.89z"
+                data-name="<Path>"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>

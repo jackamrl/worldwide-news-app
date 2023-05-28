@@ -24,7 +24,7 @@ export class NewCardComponent implements OnInit {
       timeZone: 'UTC',
     };
     const formattedDateTime = new Date(dateTime).toLocaleString(
-      'en-US',
+      'fr-FR',
       options
     );
     return formattedDateTime;
