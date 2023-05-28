@@ -2,25 +2,46 @@
   class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ease-in-out duration-200 hover:drop-shadow-xl"
 >
   <a>
-    <img class="rounded-t-lg" [src]="new.urlToImage" alt="" />
+    <img
+      style="width: 100%; object-fit: fit; background: #d9d9d9"
+      class="h-80 sm:h-72 md:h-52 rounded-t-lg"
+      [src]="new.media"
+      alt=""
+    />
   </a>
   <div class="p-5">
     <a href="#">
       <h5
+        style="
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        "
         class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
       >
         {{ new.title }}
       </h5>
     </a>
-    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-      {{ new.description }}
+    <p
+      style="
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      "
+      class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+    >
+      {{ new.excerpt }}
     </p>
 
     <p
       style="font-size: 0.9rem !important"
       class="italic mb-3 font-xs font-semibold text-gray-900 dark:text-gray-400"
     >
-      {{ formatDateTime(new.publishedAt) }}
+      {{ formatDateTime(new.published_date) }}
     </p>
 
     <a
@@ -51,30 +72,37 @@
   *ngIf="showModal"
   class="h-4/5 w-4/5 m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
 >
-  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+  <div class="relative w-auto mx-auto max-w-6xl">
     <!--content-->
     <div
       class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
     >
-      <img class="w-full h-full" [src]="new.urlToImage" alt="" />
+      <img
+        style="height: 800px; background: #d9d9d9"
+        class="w-full"
+        [src]="new.media"
+        alt=""
+      />
 
       <div class="relative p-6 flex-auto">
-        <h3 class="text-3xl font-semibold">{{ new.title }}</h3>
+        <h3 style="color: #111827" class="text-3xl font-semibold">
+          {{ new.title }}
+        </h3>
 
         <p class="my-4 text-slate-500 text-lg">
-          {{ new.content }}
+          {{ new.summary }}
         </p>
         <p class="my-4 text-slate-500 text-xs font-semibold leading-relaxed">
-          Publié par : {{ new.author }}
+          Publié par : {{ new.authors }}
         </p>
         <p
           style="font-size: 0.9rem !important"
           class="italic mb-3 font-xs font-semibold text-gray-900 dark:text-gray-400"
         >
-          {{ formatDateTime(new.publishedAt) }}
+          {{ formatDateTime(new.published_date) }}
         </p>
-        <p class="opacity-50">
-          <a target="_blank" href="{{ new.url }}"
+        <p style="color: rgb(53, 52, 53)" class="opacity-50">
+          <a class="flex items-center" target="_blank" href="{{ new.link }}"
             >Source
             <span>
               <svg
@@ -91,6 +119,17 @@
                   d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                 /></svg></span
           ></a>
+        </p>
+        <p>
+          <a
+            href="https://twitter.com/{{ new.twitter_account }}"
+            target="_blank"
+            ><img
+              style="height: 30px; width: 30px"
+              src="./../../assets/twitter.svg"
+              alt=""
+            />Compte twitter</a
+          >
         </p>
       </div>
       <!--footer-->
