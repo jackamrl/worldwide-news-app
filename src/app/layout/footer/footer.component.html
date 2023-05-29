@@ -2,20 +2,20 @@
 
 <footer class="bg-custom text-custom rounded-lg shadow w-full">
   <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <a href="/" class="flex items-center mb-4 sm:mb-0">
+    <div class="flex flex-row items-center justify-between mb-4">
+      <a href="/" class="flex items-center sm:mb-0">
         <img
           src="./../../../assets/wordlwideNewsLogo.svg"
           class="h-8 mr-3"
           alt="worldwide Logo"
         />
         <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-          >worldwide</span
+          class="hidden sm:block self-center text-base md:text-xl font-semibold whitespace-nowrap dark:text-white"
+          >worldwide news</span
         >
       </a>
       <ul
-        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-400"
+        class="flex flex-wrap items-center text-xs sm:text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-400"
       >
         <li>
           <a href="/news" class="mr-4 hover:underline md:mr-6">News</a>
@@ -33,7 +33,7 @@
             <button
               (click)="toggleDarkMode()"
               type="button"
-              class="focus:ring-2 focus:outline-none focus:ring-purple-800 font-medium rounded-lg text-sm px-3 py-2 text-center mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+              class="font-medium rounded-lg text-sm px-3 py-2 text-center mr-0 dark:bg-purple-600 dark:hover:bg-purple-700"
             >
               <svg
                 *ngIf="!isDarkMode()"
@@ -69,7 +69,7 @@
             <!-- Social button -->
             <a
               target="_blank"
-              class="focus:ring-2 focus:outline-none focus:ring-purple-800 font-medium rounded-lg text-sm px-3 py-2 text-center mr-3 md:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800 hover:text-slate-500 dark:hover:text-white"
+              class="font-medium rounded-lg text-sm px-3 py-2 text-center mr-3 md:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 hover:text-slate-500 dark:hover:text-white"
               href="https://github.com/jackamrl/"
             >
               <svg

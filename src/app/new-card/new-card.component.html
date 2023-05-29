@@ -70,16 +70,22 @@
 </div>
 <div
   *ngIf="showModal"
-  class="h-4/5 w-4/5 m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+  style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  "
+  class="h-4/5 w-4/5 overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
 >
-  <div class="relative w-auto mx-auto max-w-6xl">
+  <div class="relative w-auto mx-auto">
     <!--content-->
     <div
       class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
     >
       <img
         style="height: 800px; background: #d9d9d9"
-        class="w-full"
+        class="hidden md:block w-full"
         [src]="new.media"
         alt=""
       />
@@ -128,8 +134,7 @@
               style="height: 30px; width: 30px"
               src="./../../assets/twitter.svg"
               alt=""
-            />Compte twitter</a
-          >
+          /></a>
         </p>
       </div>
       <!--footer-->
