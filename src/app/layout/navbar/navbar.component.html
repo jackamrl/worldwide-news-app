@@ -2,7 +2,7 @@
   class="sticky w-full z-20 top-0 left-0 drop-shadow-lg bg-custom text-custom"
 >
   <div
-    class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3"
   >
     <div class="relative flex items-center justify-between w-full">
       <a href="/" class="flex items-center">
@@ -17,6 +17,7 @@
       </a>
       <div class="lg:hidden">
         <button
+          (click)="toggleMenu()"
           class="text-custom navbar-burger flex items-center text-purple-600 p-3"
         >
           <svg
@@ -128,7 +129,10 @@
   </div>
 </div>
 <div class="navbar-menu relative z-50 hidden">
-  <div class="navbar-backdrop fixed inset-0 bg-custom opacity-25"></div>
+  <div
+    class="navbar-backdrop fixed inset-0 bg-custom opacity-25"
+    (click)="toggleMenu()"
+  ></div>
   <nav
     class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-custom overflow-y-auto"
   >
@@ -144,7 +148,7 @@
           >worldwide news</span
         >
       </a>
-      <button class="navbar-close">
+      <button (click)="toggleMenu()" class="navbar-close">
         <svg
           class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
