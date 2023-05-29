@@ -32,7 +32,7 @@ Once the dependencies are installed, you can start working on your contribution.
 
 Once you have finished your changes, you can submit a Pull Request (PR) for your contribution to be reviewed. Please follow these steps:
 
-1. Push your local branch to the remote repository: `git push origin branch-name`
+1. Push your local branch to the remote repository: `git push origin branch-name`. Before pushing your local make sure you're up to date with the main branch by doing `git pull origin dev`
 
 2. Go to the repository on GitHub and click the "Compare & pull request" button to create a new PR.
 
