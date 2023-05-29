@@ -41,7 +41,7 @@ Please make sure to follow our [contribution guidelines](CONTRIBUTING.md) and re
 
 ## Issues
 
-If you encounter any issues or have suggestions for improvements, please open an issue on the [issue tracker](https://github.com/jackamrl/WorldwideNewsApp/issues).
+If you encounter any issues or have suggestions for improvements, please open an issue on the [issue tracker](https://github.com/jackamrl/worldwide-news-app/issues).
 
 ## License
 
