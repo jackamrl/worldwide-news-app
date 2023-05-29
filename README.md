@@ -26,9 +26,26 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Contributing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Thank you for considering contributing to WorldwideNewsApp! To contribute, follow these steps:
+
+1. Fork the repository and clone it locally.
+2. Create a new branch for your feature or bug fix.
+3. Implement your changes and add appropriate test cases.
+4. Run the existing tests using `ng test` to make sure your changes don't break anything.
+5. Commit your changes and push the branch to your forked repository.
+6. Open a pull request to the main repository, describing your changes in detail.
+
+Please make sure to follow our [contribution guidelines](CONTRIBUTING.md) and respect our [code of conduct](CODE_OF_CONDUCT.md).
+
+## Issues
+
+If you encounter any issues or have suggestions for improvements, please open an issue on the [issue tracker](https://github.com/jackamrl/WorldwideNewsApp/issues).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ## Screenshots
 
