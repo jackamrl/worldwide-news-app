@@ -1,4 +1,4 @@
-# Contributing to [Worldwide News App]
+# Contributing to Worldwide News App
 
 Thank you for your interest in contributing to [Worldwide News App]! We are excited to welcome new contributions and collaborate with the community.
 
@@ -10,7 +10,7 @@ If you encounter a problem or want to propose a new feature, please first check 
 
 ## Cloning the Project
 
-Before you start working on a contribution, you first need to clone the repository to your local environment. You can do this by running the following command: `git clone` [https://github.com/jackamrl/worldwide-news-app.git]
+Before you start working on a contribution, you first need to clone the repository to your local environment. You can do this by running the following command: `git clone https://github.com/jackamrl/worldwide-news-app.git`
 Make sure you have [Git](https://git-scm.com/) installed on your machine.
 
 ## Installing Dependencies
@@ -54,4 +54,4 @@ Thank you again for your interest in [Worldwide News App], and we look forward t
 
 Remember to customize this template for your project by adding specific details and additional instructions if necessary.
 
-Please make sure to customize the content by replacing . [Worldwide News App](https://github.com/jackamrl/worldwide-news-app.git), [issue tracker], and [(LICENSE)] with the specific values relevant to your project.
+Please make sure to customize the content by replacing . [Worldwide News App](https://github.com/jackamrl/worldwide-news-app.git), [issue tracker](https://github.com/jackamrl/worldwide-news-app/issues), and [LICENSE](LICENSE) with the specific values relevant to your project.
