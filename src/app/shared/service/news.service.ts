@@ -9,17 +9,17 @@ export class NewsService {
     'http://api.mediastack.com/v1/news?access_key=4644369840dff5852009e9e6a171a60a&limit=100,';
 
   private curentTopHeadLineNewsApiUrl =
-    'https://api.newscatcherapi.com/v2/latest_headlines?lang=fr';
+    'https://api.newscatcherapi.com/v2/latest_headlines?lang=fr&page_size=100';
   private sportNewsApiUrl =
-    'https://api.newscatcherapi.com/v2/latest_headlines?topic=sport&lang=fr';
+    'https://api.newscatcherapi.com/v2/latest_headlines?topic=sport&lang=fr&page_size=100';
   private techNewsApiUrl =
-    'https://api.newscatcherapi.com/v2/latest_headlines?topic=tech&lang=fr';
+    'https://api.newscatcherapi.com/v2/latest_headlines?topic=tech&lang=fr&page_size=100';
   private politicsNewsApiUrl =
-    'https://api.newscatcherapi.com/v2/latest_headlines?topic=politics&lang=fr';
+    'https://api.newscatcherapi.com/v2/latest_headlines?topic=politics&lang=fr&page_size=100';
   private fianceNewsApiUrl =
-    'https://api.newscatcherapi.com/v2/latest_headlines?topic=finance&lang=fr';
+    'https://api.newscatcherapi.com/v2/latest_headlines?topic=finance&lang=fr&page_size=100';
   private musicNewsApiUrl =
-    'https://api.newscatcherapi.com/v2/latest_headlines?topic=music&lang=fr';
+    'https://api.newscatcherapi.com/v2/latest_headlines?topic=music&lang=fr&page_size=100';
 
   private apiKey = 'n5GYzbyYMzLUib1N7Q2_vUVYThpa3f66bOVRigUAPKA';
 

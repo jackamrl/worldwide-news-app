@@ -28,6 +28,10 @@ Once the dependencies are installed, you can start working on your contribution.
 
 - Make the necessary changes, ensuring to test your code appropriately.
 
+## API </newscatcher>
+
+Newscatcher is the api we use. Here is the documentation of [newscatcher api](https://docs.newscatcherapi.com/) the documentation. Please use api calls sparingly, as we're only allowed one call quota.
+
 ## Submitting a Pull Request
 
 Once you have finished your changes, you can submit a Pull Request (PR) for your contribution to be reviewed. Please follow these steps:

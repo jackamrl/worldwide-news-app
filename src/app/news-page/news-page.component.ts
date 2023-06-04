@@ -17,7 +17,7 @@ export class NewsPageComponent implements OnInit {
 
   selectedCategory: string = '';
 
-  all: string = 'all';
+  all: string = '';
   techCategory: string = 'tech';
   financeCategory: string = 'finance';
   sportCategory: string = 'sport';
@@ -190,7 +190,7 @@ export class NewsPageComponent implements OnInit {
 
     if (this.selectedCategory) {
       this.loadNewsByCategory(this.selectedCategory);
-    } else if (this.selectedCategory == 'all') {
+    } else if (this.selectedCategory == '') {
       this.loadAllNews();
     }
   }
