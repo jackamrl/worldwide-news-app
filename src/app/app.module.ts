@@ -15,7 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NewModalComponent } from './new-modal/new-modal.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +33,7 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     HomePageModule,
     SharedModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

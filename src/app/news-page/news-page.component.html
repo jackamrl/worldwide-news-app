@@ -109,9 +109,65 @@
   <div class="container mx-auto py-8">
     <h1
       *ngIf="curentTopHeadLineNews.length > 0"
-      class="text-center md:text-left font-bold tracking-normal text-xl sm:text-2xl lg:text-3xl"
+      class="text-center my-4 font-bold tracking-normal text-2xl sm:text-3xl lg:text-4xl"
+    >
+      Restez informé sur l'actualité mondiale
+    </h1>
+    <div class="flex flex-wrap flex-row justify-center">
+      <button
+        [class.active]="selectedCategory === all"
+        (click)="onCategoryChange(all)"
+        class="category btn-secondary w-auto mr-6 my-2 h-12 text-sm md:text-base rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Tout
+      </button>
+      <button
+        [class.active]="selectedCategory === techCategory"
+        [value]="techCategory"
+        (click)="onCategoryChange(techCategory)"
+        class="category btn-secondary w-auto h-12 mr-6 my-2 text-sm md:text-base rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Tech
+      </button>
+      <button
+        [class.active]="selectedCategory === financeCategory"
+        (click)="onCategoryChange(financeCategory)"
+        class="category btn-secondary w-auto h-12 mr-6 my-2 text-sm md:text-base rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Finance
+      </button>
+      <button
+        [class.active]="selectedCategory === sportCategory"
+        (click)="onCategoryChange(sportCategory)"
+        class="category btn-secondary w-auto h-12 mr-6 my-2 text-sm md:text-base rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Sport
+      </button>
+      <button
+        [class.active]="selectedCategory === musicCategory"
+        (click)="onCategoryChange(musicCategory)"
+        class="category btn-secondary w-auto h-12 mr-6 my-2 text-sm md:text-base rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Musique
+      </button>
+      <button
+        [class.active]="selectedCategory === politicsCategory"
+        (click)="onCategoryChange(politicsCategory)"
+        class="category btn-secondary w-auto h-12 mr-6 my-2 text-sm md:text-base rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Politique
+      </button>
+    </div>
+    <h1
+      *ngIf="curentTopHeadLineNews.length > 0"
+      class="text-center font-semibold tracking-normal text-xl my-4 sm:text-2xl lg:text-3xl"
     >
       Les titres d'actualités
+      {{
+        selectedCategory && selectedCategory
+          ? "de la catégorie " + selectedCategory
+          : ""
+      }}
     </h1>
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8 xl:grid-cols-4"

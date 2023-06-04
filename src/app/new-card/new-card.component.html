@@ -41,7 +41,7 @@
       style="font-size: 0.9rem !important"
       class="italic mb-3 font-xs font-semibold text-gray-900 dark:text-gray-400"
     >
-      {{ formatDateTime(new.published_date) }}
+      Publié le {{ formatDateTime(new.published_date) }}
     </p>
 
     <a
@@ -70,13 +70,8 @@
 </div>
 <div
   *ngIf="showModal"
-  style="
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  "
-  class="h-4/5 w-4/5 overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+  style="align-items: first baseline"
+  class="m-auto h-4/5 w-4/5 overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
 >
   <div class="relative w-auto mx-auto">
     <!--content-->
@@ -84,7 +79,7 @@
       class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
     >
       <img
-        style="height: 800px; background: #d9d9d9"
+        style="height: 600px; background: #d9d9d9"
         class="hidden md:block w-full"
         [src]="new.media"
         alt=""
@@ -107,7 +102,7 @@
         >
           {{ formatDateTime(new.published_date) }}
         </p>
-        <p style="color: rgb(53, 52, 53)" class="opacity-50">
+        <p class="text-purple-500 font-semibold">
           <a class="flex items-center" target="_blank" href="{{ new.link }}"
             >Source
             <span>
@@ -117,7 +112,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="w-5 h-5"
               >
                 <path
                   stroke-linecap="round"

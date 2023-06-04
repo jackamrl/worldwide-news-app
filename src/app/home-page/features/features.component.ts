@@ -12,7 +12,7 @@ export class FeaturesComponent implements OnInit {
     'le sport',
     'la musique',
     'la politique',
-    'la finances',
+    'la finance',
     'la cryptomonaie',
     'le cinéma',
   ];
