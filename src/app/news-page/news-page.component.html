@@ -109,9 +109,59 @@
   <div class="container mx-auto py-8">
     <h1
       *ngIf="curentTopHeadLineNews.length > 0"
-      class="text-center md:text-left font-bold tracking-normal text-xl sm:text-2xl lg:text-3xl"
+      class="text-center my-4 font-bold tracking-normal text-2xl sm:text-3xl lg:text-4xl"
+    >
+      Restez informé sur l'actualité mondiale
+    </h1>
+    <div class="flex flex-wrap flex-row justify-center">
+      <button
+        (click)="onCategoryChange(all)"
+        class="btn-secondary w-auto mr-6 my-2 h-12 rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Tout
+      </button>
+      <button
+        [value]="techCategory"
+        (click)="onCategoryChange(techCategory)"
+        class="btn-secondary w-auto h-12 mr-6 my-2 rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Tech
+      </button>
+      <button
+        (click)="onCategoryChange(financeCategory)"
+        class="btn-secondary w-auto h-12 mr-6 my-2 rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Finance
+      </button>
+      <button
+        (click)="onCategoryChange(sportCategory)"
+        class="btn-secondary w-auto h-12 mr-6 my-2 rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Sport
+      </button>
+      <button
+        (click)="onCategoryChange(musicCategory)"
+        class="btn-secondary w-auto h-12 mr-6 my-2 rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Musique
+      </button>
+      <button
+        (click)="onCategoryChange(politicsCategory)"
+        class="btn-secondary w-auto h-12 mr-6 my-2 rounded-full hover:bg-purple-500 hover:text-white transition duration-0 hover:duration-500 ease-in-out"
+      >
+        Politique
+      </button>
+    </div>
+    <h1
+      *ngIf="curentTopHeadLineNews.length > 0"
+      class="text-center font-semibold tracking-normal text-xl my-4 sm:text-2xl lg:text-3xl"
     >
       Les titres d'actualités
+      {{
+        selectedCategory && selectedCategory
+          ? "de la catégorie " + selectedCategory
+          : ""
+      }}
     </h1>
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8 xl:grid-cols-4"
